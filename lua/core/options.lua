@@ -1,3 +1,16 @@
+-- hiliting more then 80 symbols
+vim.cmd([[
+augroup TooLong
+    autocmd!
+    autocmd winEnter,BufEnter * call clearmatches() | call matchadd('ColorColumn', '\%80v', 100)
+    "highlight ColorColumn ctermbg=0 guibg=lightgrey " Lightgray hiliting cloumn
+augroup END
+
+" Uncomment the following to have Vim jump to the last position when
+" reopening a file
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+]])
+
 local opt = vim.opt -- for conciseness
 
 -- line numbers
@@ -6,7 +19,7 @@ opt.number = true -- shows absolute line number on cursor line (when relative nu
 
 -- Splits horizontal below and vertical right
 opt.splitbelow = true
-opt.splitright = true 
+opt.splitright = true
 
 -- tabs & indentation
 opt.tabstop = 4 -- 4 spaces for tabs (prettier default)
