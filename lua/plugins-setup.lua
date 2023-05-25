@@ -33,7 +33,8 @@ return packer.startup(function(use)
 
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 
-	use("ellisonleao/gruvbox.nvim") -- preferred colorscheme
+	--use("ellisonleao/gruvbox.nvim") -- preferred colorscheme
+	use("sainnhe/gruvbox-material")
 
 	use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 
