@@ -116,6 +116,10 @@ return packer.startup(function(use)
 	use("folke/neodev.nvim")
 	use("mfussenegger/nvim-dap-python")
 
+	-- nvim-ufo
+	use({ "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async" })
+	use({ "lukas-reineke/indent-blankline.nvim" })
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
