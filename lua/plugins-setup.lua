@@ -120,6 +120,12 @@ return packer.startup(function(use)
 	use({ "kevinhwang91/nvim-ufo", requires = "kevinhwang91/promise-async" })
 	use({ "lukas-reineke/indent-blankline.nvim" })
 
+	-- which key
+	use({ "folke/which-key.nvim" })
+
+	-- Floaterm
+	use("voldikss/vim-floaterm")
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
