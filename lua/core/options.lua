@@ -13,6 +13,10 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 
 local opt = vim.opt -- for conciseness
 
+--appearance
+--opt.termguicolors = true
+opt.background = "dark"
+opt.signcolumn = "yes"
 -- line numbers
 opt.relativenumber = true -- show relative line numbers
 opt.number = true -- shows absolute line number on cursor line (when relative number is on)
@@ -53,8 +57,3 @@ opt.fileencoding = "utf-8"
 --Set cursorlinr and colomn
 opt.cursorline = true
 opt.cursorcolumn = true
-
---appearance
-opt.termguicolors = true
-opt.background = "dark"
-opt.signcolumn = "yes"
