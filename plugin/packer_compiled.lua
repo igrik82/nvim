@@ -261,6 +261,11 @@ _G.packer_plugins = {
     path = "/home/igrik/.local/share/nvim/site/pack/packer/start/vim-ReplaceWithRegister",
     url = "https://github.com/inkarkat/vim-ReplaceWithRegister"
   },
+  ["vim-floaterm"] = {
+    loaded = true,
+    path = "/home/igrik/.local/share/nvim/site/pack/packer/start/vim-floaterm",
+    url = "https://github.com/voldikss/vim-floaterm"
+  },
   ["vim-maximizer"] = {
     loaded = true,
     path = "/home/igrik/.local/share/nvim/site/pack/packer/start/vim-maximizer",
@@ -275,6 +280,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/igrik/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
     url = "https://github.com/christoomey/vim-tmux-navigator"
+  },
+  ["which-key.nvim"] = {
+    loaded = true,
+    path = "/home/igrik/.local/share/nvim/site/pack/packer/start/which-key.nvim",
+    url = "https://github.com/folke/which-key.nvim"
   }
 }
 
