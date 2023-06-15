@@ -24,7 +24,7 @@ null_ls.setup({
 			extra_args = { "--indent-size=4", "--ignore=E402,E401" },
 		}),
 		diagnostics.pylint.with({
-			extra_args = { "-d", "C0115, C0116" },
+			extra_args = { "-d", "C0103, C0115, C0116" },
 			diagnostics_postprocess = function(diagnostic)
 				diagnostic.code = diagnostic.message_id
 			end,
