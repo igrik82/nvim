@@ -43,6 +43,7 @@ cmp.setup({
 		{ name = "buffer" }, -- text within current buffer
 		{ name = "path" }, -- file system paths
 		{ name = "nvim_lsp_signature_help" }, -- show parametres of your function
+		{ name = "spell" }, -- spelling suggestion
 	}),
 	-- configure lspkind for vs-code like icons
 	formatting = {

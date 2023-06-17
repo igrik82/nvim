@@ -13,6 +13,9 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 
 local opt = vim.opt -- for conciseness
 
+--Spelling
+opt.spell = true
+opt.spelllang = { "en_us" }
 --appearance
 --opt.termguicolors = true
 opt.background = "dark"
