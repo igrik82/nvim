@@ -27,8 +27,8 @@ keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available 
 --keymap.set("n", "<C-i>", ":lua require'dap'.step_into()<CR>") -- Step into
 --keymap.set("n", "<leader>o", ":lua require'dap'.repl.open()<CR>") -- Inspecting the state
 
--- Execute current python file
---keymap.set("n", "<leader>r", ":w<CR>:belowright split |terminal python %<CR>")
+-- Execute current python file in terminal
+keymap.set("n", "<leader>t", ":w<CR>:belowright split |terminal python %<CR>")
 --keymap.set("n", "<leader>r", ":w<CR>:FloatermNew --height=0.9 --width=0.9 --autoclose=0 python %<CR>")
 
 -- Copy micropython file to esp32
