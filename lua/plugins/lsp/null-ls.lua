@@ -22,11 +22,22 @@ null_ls.setup({
 		}), -- js/ts formatter
 		formatting.stylua, -- lua formatter
 		-- formatting.autopep8,
-		formatting.autopep8.with({
-			extra_args = { "--indent-size=4", "--ignore=E402,E401" },
-		}),
-		diagnostics.pylint.with({
-			extra_args = { "-d", "C0103, C0115, C0116" },
+		-- formatting.autopep8.with({
+		-- 	extra_args = { "--indent-size=4", "--ignore=E402,E401" },
+		-- }),
+		formatting.black,
+		-- diagnostics.pylint.with({
+		-- 	diagnostics_on_save = true,
+		-- 	diagnostics_format = "[#{c}] #{m} (#{s})",
+		-- 	extra_args = { "-d", "C0103, C0115, C0116" },
+		-- 	diagnostics_postprocess = function(diagnostic)
+		-- 		diagnostic.code = diagnostic.message_id
+		-- 	end,
+		-- }),
+		diagnostics.mypy.with({
+			diagnostics_on_save = true,
+			diagnostics_format = "[#{c}] #{m} (#{s})",
+			-- extra_args = { "-d", "C0103, C0115, C0116" },
 			diagnostics_postprocess = function(diagnostic)
 				diagnostic.code = diagnostic.message_id
 			end,
