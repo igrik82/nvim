@@ -21,7 +21,6 @@ null_ls.setup({
 			filetypes = { "html", "json", "yaml", "markdown", "toml" },
 		}), -- js/ts formatter
 		formatting.stylua, -- lua formatter
-		-- formatting.autopep8,
 		-- formatting.autopep8.with({
 		-- 	extra_args = { "--indent-size=4", "--ignore=E402,E401" },
 		-- }),
@@ -34,8 +33,8 @@ null_ls.setup({
 		-- 		diagnostic.code = diagnostic.message_id
 		-- 	end,
 		-- }),
-		diagnostics.mypy.with({
-			diagnostics_on_save = true,
+		diagnostics.flake8.with({
+			-- diagnostics_on_save = true,
 			diagnostics_format = "[#{c}] #{m} (#{s})",
 			-- extra_args = { "-d", "C0103, C0115, C0116" },
 			diagnostics_postprocess = function(diagnostic)
