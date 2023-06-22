@@ -24,7 +24,9 @@ null_ls.setup({
 		-- formatting.autopep8.with({
 		-- 	extra_args = { "--indent-size=4", "--ignore=E402,E401" },
 		-- }),
-		formatting.black,
+		formatting.black.with({
+			extra_args = { "--line-length", "79" },
+		}),
 		-- diagnostics.pylint.with({
 		-- 	diagnostics_on_save = true,
 		-- 	diagnostics_format = "[#{c}] #{m} (#{s})",
