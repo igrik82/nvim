@@ -3,10 +3,10 @@ vim.g.mapleader = " "
 local keymap = vim.keymap
 
 --Resize windows in vertical split
-keymap.set("n", "<C-h>", ":vertical resize -10<CR>")
-keymap.set("n", "<C-l>", ":vertical resize +10<CR>")
-keymap.set("n", "<C-k>", ":resize -2<CR>")
-keymap.set("n", "<C-j>", ":resize +2<CR>")
+keymap.set("n", "<C-]>", ":vertical resize -10<CR>", { noremap = true })
+keymap.set("n", "<C-[>", ":vertical resize +10<CR>", { noremap = true })
+-- keymap.set("n", "<C-<Up>>", ":resize -2<CR>", { noremap = true })
+-- keymap.set("n", "<C-'>", ":resize +2<CR>", { noremap = true })
 
 --Nvim tree
 keymap.set("n", "<C-n>", ":NvimTreeToggle<CR>")
