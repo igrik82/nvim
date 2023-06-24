@@ -2,8 +2,7 @@
 vim.cmd([[
 augroup TooLong
     autocmd!
-    autocmd winEnter,BufEnter * call clearmatches() | call matchadd('ColorColumn', '\%80v', 100)
-    "highlight ColorColumn ctermbg=0 guibg=lightgrey " Lightgray hiliting cloumn
+    autocmd winEnter,BufEnter * call clearmatches() | call matchadd('ColorColumn', '\%80v.', 50) | highlight ColorColumn ctermbg=darkred ctermfg=white
 augroup END
 
 " Uncomment the following to have Vim jump to the last position when
