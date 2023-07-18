@@ -128,6 +128,9 @@ return packer.startup(function(use)
 	-- Floaterm
 	use("voldikss/vim-floaterm")
 
+	-- Codeum
+	use("Exafunction/codeium.vim")
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
