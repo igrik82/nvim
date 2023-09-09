@@ -12,6 +12,10 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 
 local opt = vim.opt -- for conciseness
 
+-- Disable virtual_text since it's redundant due to lsp_lines.
+vim.diagnostic.config({
+	virtual_text = false,
+})
 --Spelling
 opt.spell = true
 opt.spelllang = { "en_us" }

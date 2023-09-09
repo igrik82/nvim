@@ -70,6 +70,14 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-nvim-lsp-signature-help") -- show parametres of functon
 	use("f3fora/cmp-spell") -- spell suggestion
 
+	-- lsp-lines
+	use({
+		"https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+		config = function()
+			require("lsp_lines").setup()
+		end,
+	})
+
 	-- snippets
 	use("L3MON4D3/LuaSnip") -- snippet engine
 	use("saadparwaiz1/cmp_luasnip") -- for autocompletion
