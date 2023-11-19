@@ -20,6 +20,12 @@ treesitter.setup({
 		"lua",
 		"sql",
 		"yaml",
+		"diff",
+		"git_rebase",
+		"gitattributes",
+		"passwd",
+		"requirements",
+		"toml",
 	},
 	auto_install = true,
 	highlight = {
