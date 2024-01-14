@@ -23,7 +23,6 @@ mason_lspconfig.setup({
 	-- list of servers for mason to install
 	ensure_installed = {
 		--"tsserver", -- Java
-		"clangd", -- C
 		"html", -- HTML
 		"cssls", -- CSS
 		"lua_ls", -- Lua
@@ -44,8 +43,8 @@ mason_null_ls.setup({
 		"prettier", -- ts/js formatter
 		"stylua", -- lua formatter
 		"eslint_d", -- ts/js linter
-		"clang-format", -- C formater
-		"codelldb", -- C debugger
+		-- "clang-format", -- C formater
+		-- "codelldb", -- C debugger
 	},
 	-- auto-install configured formatters & linters (with null-ls)
 	automatic_installation = true,

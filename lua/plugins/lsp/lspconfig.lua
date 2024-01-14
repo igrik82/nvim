@@ -56,13 +56,31 @@ for type, icon in pairs(signs) do
 	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 end
 
+-- configure  arduino server
+lspconfig["arduino_language_server"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+	cmd = {
+		"arduino-language-server",
+
+		"-cli-config",
+		"/home/igrik/.arduino15/arduino-cli.yaml",
+		"-fqbn",
+		"esp32:esp32:esp32",
+		"-cli",
+		"/usr/bin/arduino-cli",
+		"-clangd",
+		"/usr/bin/clangd",
+	},
+})
+
 -- configure clangd server
 lspconfig["clangd"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 	cmd = {
 		"clangd",
-		"--offset-encoding=utf-16",
+		-- "--offset-encoding=utf-16",
 	},
 })
 
