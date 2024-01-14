@@ -53,6 +53,58 @@ dap.configurations.python = {
 	},
 }
 
+dap.adapters.codelldb = function(cb, config)
+	if config.request == "attach" then
+		cb({
+			type = "server",
+			port = "${port}",
+		})
+	else
+		cb({
+			type = "executable",
+			command = "codelldb",
+			args = { "--port", "${port}" },
+		})
+	end
+end
+
+dap.configurations.c = {
+	{
+		type = "codelldb",
+		request = "launch",
+		name = "Launch file",
+		program = function()
+			return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
+		end,
+		cwd = "${workspaceFolder}",
+	},
+	{
+		type = "codelldb",
+		request = "attach",
+		name = "Attach to process",
+		processId = require("dap.utils").pick_process,
+		cwd = "${workspaceFolder}",
+	},
+}
+
+-- dap.adapters.gdb = {
+-- 	type = "executable",
+-- 	command = "gdb",
+-- 	args = { "-i", "dap" },
+-- }
+--
+-- dap.configurations.c = {
+-- 	{
+-- 		name = "Launch",
+-- 		type = "gdb",
+-- 		request = "launch",
+-- 		program = function()
+-- 			return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
+-- 		end,
+-- 		cwd = "${workspaceFolder}",
+-- 	},
+-- }
+
 dap.listeners.after.event_initialized["dapui_config"] = function()
 	dapui.open()
 end

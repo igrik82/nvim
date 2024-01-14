@@ -35,6 +35,8 @@ null_ls.setup({
 		-- 		diagnostic.code = diagnostic.message_id
 		-- 	end,
 		-- }),
+		formatting.clang_format,
+
 		diagnostics.flake8.with({
 			-- diagnostics_on_save = true,
 			diagnostics_format = "[#{c}] #{m} (#{s})",
