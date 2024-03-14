@@ -121,6 +121,7 @@ return packer.startup(function(use)
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
 
 	-- debuggin python
+	use("jay-babu/mason-nvim-dap.nvim")
 	use("mfussenegger/nvim-dap") -- DAP (Debug Adapter Protocol)
 	use({ "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap" } })
 	use("folke/neodev.nvim")

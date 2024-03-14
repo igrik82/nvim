@@ -16,8 +16,22 @@ if not mason_null_ls_status then
 	return
 end
 
+-- import mason-nvim-dap plugin safely
+local mason_nvim_dap_status, mason_nvim_dap = pcall(require, "mason-nvim-dap")
+if not mason_nvim_dap_status then
+	return
+end
+
 -- enable mason
 mason.setup()
+
+mason_nvim_dap.setup({
+	-- list of servers for mason to install
+	ensure_installed = { "cppdbg" },
+	-- auto-install configured servers (with lspconfig)
+	automatic_installation = true, -- not the same as ensure_installed
+	handlers = {},
+})
 
 mason_lspconfig.setup({
 	-- list of servers for mason to install
@@ -32,6 +46,7 @@ mason_lspconfig.setup({
 		"pyright", -- Python
 		"jsonls", -- Json
 		"yamlls", -- YAML
+		"clangd", -- C++
 	},
 	-- auto-install configured servers (with lspconfig)
 	automatic_installation = true, -- not the same as ensure_installed
@@ -43,8 +58,7 @@ mason_null_ls.setup({
 		"prettier", -- ts/js formatter
 		"stylua", -- lua formatter
 		"eslint_d", -- ts/js linter
-		-- "clang-format", -- C formater
-		-- "codelldb", -- C debugger
+		"clang-format", -- C formater
 	},
 	-- auto-install configured formatters & linters (with null-ls)
 	automatic_installation = true,

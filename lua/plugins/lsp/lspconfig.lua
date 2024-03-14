@@ -78,9 +78,14 @@ lspconfig["arduino_language_server"].setup({
 lspconfig["clangd"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
+	server_capabilities = {
+		signatureHelpProvider = {
+			false,
+		},
+	},
 	cmd = {
 		"clangd",
-		-- "--offset-encoding=utf-16",
+		"--offset-encoding=utf-16",
 	},
 })
 
