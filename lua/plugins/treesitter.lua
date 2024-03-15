@@ -7,6 +7,7 @@ end
 -- configure telescope
 treesitter.setup({
 	ensure_installed = {
+		"cpp",
 		"c",
 		"python",
 		"markdown",

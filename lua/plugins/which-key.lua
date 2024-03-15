@@ -19,6 +19,9 @@ local mappings = {
 
 	--Telescope
 	f = "Telescope",
+
+	--bufferline
+	b = { ":BufferLinePickClose<CR>", "Close buffer" },
 }
 
 local opts = { prefix = "<leader>" }

@@ -137,6 +137,9 @@ return packer.startup(function(use)
 	-- Floaterm
 	use("voldikss/vim-floaterm")
 
+	--bufferline
+	use({ "akinsho/bufferline.nvim", tag = "*", requires = "nvim-tree/nvim-web-devicons" })
+
 	-- Codeium
 	use("Exafunction/codeium.vim")
 
