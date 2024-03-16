@@ -27,7 +27,7 @@ keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>") -- list available 
 keymap.set(
 	"n",
 	"<leader>t",
-	":w<CR>:belowright split |terminal ~/Projects/cpp/compile.sh %<CR> |:FloatermNew ./main<CR>"
+	":w<CR>:belowright split |!bash ~/Projects/cpp/compile.sh %<CR>|:q |:FloatermNew ./main<CR>"
 )
 --keymap.set("n", "<leader>r", ":w<CR>:FloatermNew --height=0.9 --width=0.9 --autoclose=0 python %<CR>")
 
