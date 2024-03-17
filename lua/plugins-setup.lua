@@ -119,6 +119,7 @@ return packer.startup(function(use)
 
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
+	use({ "TimUntersberger/neogit", requires = { "sindrets/diffview.nvim" }, config = true }) -- neogit integrations
 
 	-- debuggin python
 	use("jay-babu/mason-nvim-dap.nvim")
